@@ -20,6 +20,6 @@ from user import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/',views.user,name='user'),
-    path('Thankyou/',views.thankyou,name='thankyou')
+    path('', views.user, name='user'),
+    path('thankyou/', views.thankyou, name='thankyou')
 ]

@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 
 from user.models import Survey_form
 
+
 def user(request):                                   # METHOD 1
     if request.method == 'POST':
         data = Survey_form(
@@ -32,7 +33,7 @@ def user(request):                                   # METHOD 1
         )
         data.save()
         return redirect('thankyou')  # You can create a thank-you page
-    return render(request, 'template1.html')
+    return render(request,'template1.html')
 
 def thankyou(req):
     return render(req,'thankyou.html')
